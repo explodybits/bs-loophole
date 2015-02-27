@@ -7,7 +7,7 @@ script adds a single screen-* class name to the &lt;html&gt; element.
 
 The class names include `screen-xs, screen-sm, screen-md, screen-lg`
 
-If the script detects a mobile device, an additional `device-mobile` class will 
+If the script detects a mobile device, a `device-mobile` class will 
 also be added.
 
 ## Usage
