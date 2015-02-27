@@ -1,5 +1,5 @@
 # bs-loophole
-Adds the active Bootstrap media query/screen size class to `<html>` as `screen-*`. Similar to the `visible-*`, but added dynamically and updated on `window.onresize`
+Adds the active Bootstrap media query/screen size class to `<html>` as `screen-*`. Similar to the `visible-*`, but added dynamically and updated on `$(window).resize`
 
 ## Why?
 Rather than sprinkling `visible-*` or `hidden-*` classes throughout the markup, this
