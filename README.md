@@ -1,2 +1,2 @@
 # bs-loophole
-A tiny script that adds bootstrap's grid/screen class to &lt;html&gt;
+Dynamically adds bootstrap's visible-* class to <html> as screen-*.
