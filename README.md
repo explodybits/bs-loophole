@@ -1,8 +1,8 @@
 # bs-loophole
-Dynamically adds bootstrap's visible-* class to &lt;html&gt; as screen-*
+Dynamically adds bootstrap's `visible-*` class to `&lt;html&gt;` as `screen-*`
 
 ## Why?
-Rather than sprinkling visible-* or hidden-* classes throughout the markup, this
+Rather than sprinkling `visible-*` or `hidden-*` classes throughout the markup, this
 script adds a single screen-* class name to the &lt;html&gt; element.
 
 The class names include `screen-xs, screen-sm, screen-md, screen-lg`
