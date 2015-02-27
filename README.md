@@ -1,2 +1,2 @@
-# bs-loophole
-Adds the Bootstrap grid/screen size class name to &lt;html>
+# loophole
+A tiny script that adds bootstrap's grid/screen class to &lt;html&gt;
