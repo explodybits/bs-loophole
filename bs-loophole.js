@@ -38,12 +38,9 @@
         return v;
     };
 
-    var mobile = (function() {
-        var re = /Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera Mini/i;
-        return function()
-        {
-            return (size <= sizes.MD) && re.test(navigator.userAgent);
-        };
+    (function() {
+        if (size <= sizes.MD && /Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+            h.className += ' device-mobile';        
     })();
 
     ;(function()
@@ -68,9 +65,6 @@
         {
             h.className = h.className.replace(re, '');
             h.className += (' ' + apply());
-
-            if (mobile())
-                h.className += ' device-mobile';
         };
 
         resize();
