@@ -14,7 +14,7 @@ If the script detects a mobile device, a `device-mobile` class will
 also be added.
 
 ## Demo
-(http://explodybits.com/github/bs-loophole/)
+<a href="http://explodybits.com/github/bs-loophole/" target="_blank">http://explodybits.com/github/bs-loophole/</a>
 
 ## Install
 Add `<script src="assets/js/bs-loophole.min.js"></script>` to `<head>` immediately after jQuery
