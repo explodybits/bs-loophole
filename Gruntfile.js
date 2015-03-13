@@ -63,7 +63,7 @@ module.exports = function (grunt) {
         },
         clean:{
             build: {
-                src: ['demo/assets/css/screen.css']
+                src: ['dist/screen.min.css']
             }
         }
     });

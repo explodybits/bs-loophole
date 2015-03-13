@@ -13,10 +13,16 @@ The class names include `screen-xs, screen-sm, screen-md, screen-lg, screen-xl`
 If the script detects a mobile device, a `device-mobile` class will 
 also be added.
 
+## Demo
+(http://explodybits.com/github/bs-loophole/)
+
+## Install
+Add `<script src="assets/js/bs-loophole.min.js"></script>` to `<head>` immediately after jQuery
+
 ## Usage
 ```css
 html.screen-md,
-html.screen-sm {
+html.screen-sm { 
     /** toggle/style elements for smaller screens **/ 
 }
 
