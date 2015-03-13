@@ -1,7 +1,7 @@
 (function($, w, d)
 {
     'use strict';
-
+    
     var h = d.documentElement
        ,b = d.createElement('body')
        ,e = d.createElement('div')
@@ -18,11 +18,10 @@
             XL: 4
         }
        ,keys = Object.keys(sizes);
-
+ 
     var apply = function()
     {
-        var v;       
-        e.className = '';
+        var v = e.className = '';
 
         for (var s in sizes) {
             v = s.toLowerCase();
@@ -32,9 +31,10 @@
                 v = 'screen-' + v;
                 break;
             }
+            v = '';
         }
-
-        screen = v;
+        
+        screen = v;        
         return v;
     };
 
@@ -59,10 +59,11 @@
 
     ;(function()
     {
-        var re = new RegExp(' screen-(?:' + keys.join('|') + ')', 'gi');
-
+        var re = new RegExp('\\b(device|screen)-(?:' + keys.join('|') + '|mobile)\\b', 'gi');
+        
         var resize = function()
         {
+            t = clearTimeout(t);            
             h.className = h.className.replace(re, '');
             h.className += (' ' + apply());
         };

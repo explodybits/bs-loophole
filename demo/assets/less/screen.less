@@ -1,0 +1,54 @@
+@import 'bootstrap.less';
+
+body > * > div {
+    .container;
+    h1 {
+        .lead;
+        text-align: center;
+        font-size: 200% !important;
+        padding: 1em 0;
+    }        
+    > div {
+        display: none;
+        &:nth-of-type(1) {
+            background: #f8103b;            
+            + div {
+                background: #10caf8;
+                + div {
+                    background: #9bd905;
+                    + div {
+                        background: #b71fef;
+                        + div {
+                            background: #fc9714;
+                            + div {
+                                background: #000;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        html.device-mobile &#device-mobile {
+            display: block;
+        }
+        html.screen-xs &#screen-xs {
+            display: block;
+        }
+        html.screen-sm &#screen-sm {
+            display: block;
+        }
+        html.screen-md &#screen-md {
+            display: block;
+        }
+        html.screen-lg &#screen-lg {
+            display: block;
+        }
+        html.screen-xl &#screen-xl {
+            display: block;
+        } 
+        h1 {
+            color: #fff;            
+        }
+    }
+}
+
