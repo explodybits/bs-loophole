@@ -1579,7 +1579,16 @@ body > * > div {
     width: 1170px;
   }
 }
-body > * > div h1 {
+body > * > div a {
+  color: #f82b28;
+}
+body > * > div a:hover {
+  color: #f82b28;
+  font-weight: bold;
+  text-decoration: none;
+}
+body > * > div h1,
+body > * > div h2 {
   margin-bottom: 20px;
   font-size: 16px;
   font-weight: 300;
@@ -1589,9 +1598,19 @@ body > * > div h1 {
   padding: 1em 0;
 }
 @media (min-width: 768px) {
-  body > * > div h1 {
+  body > * > div h1,
+  body > * > div h2 {
     font-size: 21px;
   }
+}
+body > * > div > h1:first-child {
+  font-size: 250% !important;
+  padding-bottom: 0;
+}
+body > * > div h2 {
+  padding: .25em 0;
+  font-style: italic;
+  color: #ccc;
 }
 body > * > div > div {
   display: none;

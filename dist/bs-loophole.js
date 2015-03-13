@@ -59,7 +59,7 @@
 
     ;(function()
     {
-        var re = new RegExp('\\b(device|screen)-(?:' + keys.join('|') + '|mobile)\\b', 'gi');
+        var re = new RegExp('\\bscreen-(?:' + keys.join('|') + ')\\b', 'gi');
         
         var resize = function()
         {

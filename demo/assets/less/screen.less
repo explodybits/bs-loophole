@@ -2,12 +2,30 @@
 
 body > * > div {
     .container;
-    h1 {
+    a {
+        color: #f82b28;
+        &:hover {
+            color: #f82b28;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }    
+    h1,
+    h2 {
         .lead;
         text-align: center;
         font-size: 200% !important;
         padding: 1em 0;
-    }        
+    }
+    > h1:first-child {
+        font-size: 250% !important;
+        padding-bottom: 0;
+    }
+    h2 {
+        padding: .25em 0;
+        font-style: italic;
+        color: #ccc;
+    }
     > div {
         display: none;
         &:nth-of-type(1) {
