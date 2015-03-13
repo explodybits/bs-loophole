@@ -5,8 +5,8 @@ A tiny (< 1K) script that infers the active Bootstrap screen size media query an
 Rather than sprinkling `visible-*` or `hidden-*` classes throughout the markup, this
 script adds a single `screen-(xs|sm|md|lg|xl)` class name to the `<html>` element.
 
-Also, targeting a screen size via class name is much easier than duplicating media queries
-throughout stylesheets.
+Targeting a screen size via class name is much easier to implement & manage, rather than duplicating media queries
+throughout stylesheet(s).
 
 The class names include `screen-xs, screen-sm, screen-md, screen-lg, screen-xl`
 
