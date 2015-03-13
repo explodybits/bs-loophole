@@ -1706,3 +1706,6 @@ html.screen-xl body > * > div > div#screen-xl {
 body > * > div > div h1 {
   color: #fff;
 }
+html.screen-xs #middle {
+  margin-top: 4em;
+}
