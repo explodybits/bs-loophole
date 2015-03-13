@@ -1632,12 +1632,16 @@ body > * > div {
   }
 }
 body > * > div a {
+  display: none;
   color: #f82b28;
 }
 body > * > div a:hover {
   color: #f82b28;
   font-weight: bold;
   text-decoration: none;
+}
+html.screen-lg body > * > div a {
+  display: inline;
 }
 body > * > div h1,
 body > * > div h2 {
@@ -1663,6 +1667,9 @@ body > * > div h2 {
   padding: .25em 0;
   font-style: italic;
   color: #ccc;
+}
+html.device-mobile body > * > div h2 {
+  display: none;
 }
 body > * > div > div {
   display: none;

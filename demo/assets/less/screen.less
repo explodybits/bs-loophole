@@ -3,11 +3,15 @@
 body > * > div {
     .container;
     a {
+        display: none;
         color: #f82b28;
         &:hover {
             color: #f82b28;
             font-weight: bold;
             text-decoration: none;
+        }
+        html.screen-lg & {
+            display: inline;
         }
     }    
     h1,
@@ -21,10 +25,13 @@ body > * > div {
         font-size: 250% !important;
         padding-bottom: 0;
     }
-    h2 {
+    h2 {        
         padding: .25em 0;
         font-style: italic;
         color: #ccc;
+        html.device-mobile & {
+            display: none;
+        }
     }
     > div {
         display: none;
