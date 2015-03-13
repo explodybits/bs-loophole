@@ -21,12 +21,23 @@ Add `<script src="assets/js/bs-loophole.min.js"></script>` to `<head>` immediate
 
 ## Usage
 ```css
-html.screen-md,
-html.screen-sm { 
+html.screen-md div,
+html.screen-sm div { 
     /** toggle/style elements for smaller screens **/ 
 }
 
-html.device-mobile {
+html.device-mobile div {
     /** toggle/style elements for mobile devices */
 }
+
+/** increase font size when on large screen */
+html.screen-lg div#middle {
+    font-size: 125%;
+}
+
+/** turn off a feature when on extra small */
+html.screen-xs div#middle div#non-mobile-friendly-thing {
+    display: none;
+}
+
 ```
