@@ -18,6 +18,7 @@ also be added.
 
 ## Install
 Add `<script src="assets/js/bs-loophole.min.js"></script>` to `<head>` immediately after jQuery
+NOTE: The bootstrap stylesheet should be defined ABOVE `bs-loophole`
 
 ## Usage
 ```css
