@@ -70,16 +70,13 @@
             h.className += ' device-mobile';        
     })();
 
-    ;(function()
+    $(w).resize(function()
     {
-        $(w).resize(function()
+        t = clearTimeout(t);
+        t = setTimeout(function()
         {
-            t = clearTimeout(t);
-            t = setTimeout(function()
-            {
-                resize();
-            }, 15);
-        });
-    })();
+            resize();
+        }, 15);
+    });
 
 })(window.jQuery, window, document);
