@@ -7,6 +7,8 @@
        ,e = d.createElement('div')
        ,c = []
        ,t;
+              
+    b.style.display = 'none';
 
     var screen = null
        ,size = null
@@ -22,6 +24,7 @@
     var apply = function()
     {
         var v = e.className = '';
+        screen = size = null;
 
         for (var s in sizes) {
             v = s.toLowerCase();
@@ -32,13 +35,15 @@
                 break;
             }
             v = '';
+            size = null;
         }
         
         screen = v;        
         return v;
     };
-
+        
     (function() {
+        apply();        
         if (size <= sizes.MD && /Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
             h.className += ' device-mobile';        
     })();
@@ -53,8 +58,8 @@
             e = e.get(0);
         });
 
-        b.appendChild(e);
-        h.appendChild(b);
+        //b.appendChild(e);
+        //h.appendChild(b);
     })();
 
     ;(function()
