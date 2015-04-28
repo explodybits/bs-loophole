@@ -7,8 +7,6 @@
        ,e = d.createElement('div')
        ,c = []
        ,t;
-              
-    b.style.display = 'none';
 
     var screen = null
        ,size = null
@@ -24,7 +22,6 @@
     var apply = function()
     {
         var v = e.className = '';
-        screen = size = null;
 
         for (var s in sizes) {
             v = s.toLowerCase();
@@ -35,19 +32,22 @@
                 break;
             }
             v = '';
-            size = null;
         }
         
         screen = v;        
         return v;
     };
+    
+    var resize = function()
+    {
+        if (!resize.re)
+            resize.re = new RegExp('\\bscreen-(?:' + keys.join('|') + ')\\b', 'gi');
         
-    (function() {
-        apply();        
-        if (size <= sizes.MD && /Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
-            h.className += ' device-mobile';        
-    })();
-
+        t = clearTimeout(t);            
+        h.className = h.className.replace(resize.re, '');
+        h.className += (' ' + apply());
+    };        
+    
     ;(function()
     {
         $(function()
@@ -56,25 +56,23 @@
             h.removeChild(b);
             $(d.body).append(e);
             e = e.get(0);
+            resize();
         });
 
-        //b.appendChild(e);
-        //h.appendChild(b);
+        b.appendChild(e);
+        h.appendChild(b);
     })();
-
+    
     ;(function()
     {
-        var re = new RegExp('\\bscreen-(?:' + keys.join('|') + ')\\b', 'gi');
-        
-        var resize = function()
-        {
-            t = clearTimeout(t);            
-            h.className = h.className.replace(re, '');
-            h.className += (' ' + apply());
-        };
+        apply();
+        if (size <= sizes.MD && /Android|webOS|iP(hone|ad|od)|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent))
+            h.className += ' device-mobile';        
+    })();
 
+    ;(function()    
+    {
         resize();
-
         $(w).resize(function()
         {
             t = clearTimeout(t);

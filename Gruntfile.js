@@ -4,11 +4,11 @@ module.exports = function (grunt) {
         watch: {
             scripts: {
                 files: ['src/*.js'],
-                tasks: ['uglify'],
+                tasks: ['uglify', 'copy', 'clean'],
                 options: {
                     spawn: false
                 }
-            },
+            },            
             css: {
                 files: ['src/*.less', 'demo/assets/less/*.less']
                ,tasks: ['less', 'cssmin']               
@@ -57,7 +57,7 @@ module.exports = function (grunt) {
             build:{
                 cwd: 'src',
                 src: ['**', '!**/*.min', '!**/*.less'],
-                dest: 'dist/',
+                dest: 'dist',
                 expand: true
             }
         },
