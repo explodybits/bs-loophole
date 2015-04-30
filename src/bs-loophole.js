@@ -41,9 +41,9 @@
     var resize = function()
     {
         if (!resize.re)
-            resize.re = new RegExp('\\bscreen-(?:' + keys.join('|') + ')\\b', 'gi');
-        
-        t = clearTimeout(t);            
+            resize.re = new RegExp('\\s*\\bscreen-(?:' + keys.join('|') + ')\\b', 'gi');
+
+        t = clearTimeout(t);
         h.className = h.className.replace(resize.re, '');
         h.className += (' ' + apply());
     };        
