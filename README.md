@@ -50,14 +50,12 @@ html.screen-xs div#middle div#non-mobile-friendly-thing {
 
 ## LESS Example
 ```less
-header {
-    > div {
-        btn {
-            font-size: 250%;
-            // make smaller for mobile
-            html.screen-xs & {
-                font-size: 150;
-            }
+header > div {
+    btn {
+        font-size: 250%;
+        // make smaller for mobile
+        html.screen-xs & {
+            font-size: 150%;
         }
     }
 }
