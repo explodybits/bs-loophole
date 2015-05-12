@@ -1,4 +1,4 @@
-# bs-loophole
+# bs-loophole / Bootstrap Loophole
 A tiny (< 1K) script that infers the active Bootstrap screen size media query and adds the resulting `screen-(xs|sm|md|lg|xl)` class to `<html>`. Similar to the `visible-*`, but added dynamically and updated on `$(window).resize`
 
 ## Why?
@@ -48,7 +48,7 @@ html.screen-xs div#middle div#non-mobile-friendly-thing {
 
 ```
 
-## LESS Example
+## LESS/SCSS Example
 ```less
 header > div {
     btn {
