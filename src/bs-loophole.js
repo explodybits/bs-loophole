@@ -25,7 +25,7 @@
 
         for (var s in sizes) {
             v = s.toLowerCase();
-            e.className = 'hidden-' + v;
+            e.className = 'hidden-' + v + '-down';
             if (0 === e.clientWidth) {
                 size = sizes[s];
                 v = 'screen-' + v;
