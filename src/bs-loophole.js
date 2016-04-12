@@ -25,7 +25,8 @@
 
         for (var s in sizes) {
             v = s.toLowerCase();
-            e.className = 'hidden-' + v + '-down';
+            e.className = 'hidden-' + v;// bs-3 backward compatibility
+            e.className = 'hidden-' + v + '-down'; // bs-4
             if (0 === e.clientWidth) {
                 size = sizes[s];
                 v = 'screen-' + v;
